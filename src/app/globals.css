@@ -32,4 +32,7 @@ body {
   .btn_green_round{
     @apply py-2 px-6 text-white font-[600] text-sm bg-green-10 rounded-full min-h-14
   }
+  .hover_green{
+    @apply hover:text-green-10
+  }
 }
