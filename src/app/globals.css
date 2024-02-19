@@ -26,4 +26,13 @@ body {
   .primary-input{
     @apply w-72 h-10 p-3 focus:outline-none 
   }
+  .btn_green{
+    @apply w-full py-2 px-4 text-white font-[600] text-sm bg-green-10 rounded-md
+  }
+  .btn_green_round{
+    @apply py-2 px-6 text-white font-[600] text-sm bg-green-10 rounded-full min-h-14
+  }
+  .hover_green{
+    @apply hover:text-green-10
+  }
 }
