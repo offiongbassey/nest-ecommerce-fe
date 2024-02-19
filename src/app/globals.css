@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Quicksand;
+}
+
+@layer utilities{
+  .max-container {
+    @apply mx-auto max-w-[1440px]
+  }
+  .padding-container {
+    @apply px-5 lg:px-24;
+  }
+  .cirlce-count{
+    @apply bg-green-10 py-1 px-[10px] text-white rounded-full absolute ml-3 mb-3
+  }
+  .primary-input{
+    @apply w-72 h-10 p-3 focus:outline-none 
+  }
+}
