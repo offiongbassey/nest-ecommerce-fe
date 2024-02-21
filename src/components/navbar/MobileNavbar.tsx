@@ -4,12 +4,15 @@ import SearchIcon from '@/svg/SearchIcon'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Input } from 'postcss'
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import Button from '../Button';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
+interface MobileNavbarProps {
+    setToggle: Dispatch<SetStateAction<boolean>>
+}
 
-const MobileNavbar = () => {
+const MobileNavbar = ({setToggle}: MobileNavbarProps) => {
   return (
     <div className='absolute top-0 left-0 w-full h-screen md:hidden px-6 py-6 bg-white'>
      <div className='flex justify-between items-start'>
@@ -20,9 +23,10 @@ const MobileNavbar = () => {
             height={46}
             className='pb-6'
         />
+        <button type='button' onClick={() => setToggle((prev) => !prev)}>
         <IoIosCloseCircleOutline className='text-green-30' size={40} />
+        </button>
      </div>
-
       <div className='my-2 bg-gray-40 rounded-full pl-2 flex gap-2 items-center justify-between'>
         <SearchIcon color='#6A6A6A' width={40} />
         <input className='w-full p-2 focus:outline-none bg-gray-40 text-[#6A6A6A]' placeholder='Search for Items' />

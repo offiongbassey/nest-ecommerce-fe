@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import SearchItem from "./category/SearchItem";
 import Arrow from "./Arrow";
 import { IoIosMenu } from "react-icons/io";
+import Navbar from "./navbar/Navbar";
+import { useState } from "react";
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
   return (
+    <>
     <header className="padding-container max-container text-gray-10 text-sm font-[500]">
         <div className="hidden lg:flex justify-between items-center py-2">
             <div className="flex gap-4">
@@ -22,7 +28,8 @@ const Header = () => {
         </div>
 
         <div className="flex justify-between md:justify-start gap-10 lg:gap-0 lg:justify-between items-center py-6 border-y-2 border-gray-20">
-            <button type="button" className="flex md:hidden">
+            {/* toggle icon */}
+            <button onClick={() => setToggle((prev) => !prev)} type="button" className="flex md:hidden">
             <IoIosMenu className="text-green-30" size={35} />
             </button>
             
@@ -86,9 +93,10 @@ const Header = () => {
                     <p>Account</p>
                 </Link>
             </div>
-
         </div>
     </header>
+    <Navbar toggle={toggle} setToggle={setToggle} />
+    </>
   )
 }
 
