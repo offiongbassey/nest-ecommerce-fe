@@ -304,3 +304,110 @@ export const DEALS_OF_THE_DAY = [
         image: "/product-4-wrap.png"   
     },
 ]
+
+export const TOP_AND_TRENDING_PRODUCTS = [
+    {
+        title: "Top Selling",
+        items:  [
+            {
+            name: "Nestle Original Coffee-Mate Coffee Creamer",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-1.png"
+            },
+            {
+            name: "Nestle Original Coffee-Mate Coffee Creamer",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-2.png"
+            },
+            {
+            name: "Nestle Original Coffee-Mate Coffee Creamer",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-3.png"
+            },
+        ]
+    },
+    {
+        title: "Trending Products",
+        items:  [
+            {
+            name: "Organic Cage-Free Grade A Large Brown Eggs",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-4.png"
+            },
+            {
+            name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-5.png"
+            },
+            {
+            name: "Naturally Flavored Cinnamon Vanilla Light Roast Coffee",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-6.png"
+            },
+        ]
+    },
+    {
+        title: "Recently added",
+        items:  [
+            {
+            name: "Pepperidge Farm Farmhouse Hearty White Bread",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-7.png"
+            },
+            {
+            name: "Organic Frozen Triple Berry Blend",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-8.png"
+            },
+            {
+            name: "Oroweat Country Buttermilk Bread",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-9.png"
+            },
+        ]
+    },
+    {
+        title: "Top Rated",
+        items:  [
+            {
+            name: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-10.png"
+            },
+            {
+            name: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-11.png"
+            },
+            {
+            name: "All Natural Italian-Style Chicken Meatballs",
+            rate: 4.0,
+            price: 32.85,
+            old_price: 33.8,
+            image: "/top-product-12.png"
+            },
+        ]
+    }
+]
