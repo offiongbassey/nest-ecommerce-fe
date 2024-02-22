@@ -1,10 +1,11 @@
 type ArrowIconProps = {
   className: string;
+  size?: number;
 }
 
-export default function ArrowIcon({ className }: ArrowIconProps) {
+export default function ArrowIcon({ className, size=13 }: ArrowIconProps) {
     return (
-      <svg width="13" height="12" viewBox="0 0 13 12" className={className} xmlns="http://www.w3.org/2000/svg">
+      <svg width={size} height={size} viewBox="0 0 13 12" className={className} xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_6511_1075)">
       <path d="M4.16859 7.76001C3.90193 7.76001 3.66193 7.65334 3.44859 7.44001L0.808594 4.80001L1.52859 4.12001L4.16859 6.76001L6.80859 4.12001L7.52859 4.80001L4.88859 7.44001C4.67526 7.65334 4.43526 7.76001 4.16859 7.76001Z" className={className} />
       </g>

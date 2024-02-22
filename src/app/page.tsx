@@ -1,5 +1,9 @@
 import Banner from "@/components/banner/Banner";
 import FeaturedCategory from "@/components/category/FeaturedCategory";
+import DailyBestSells from "@/components/product/DailyBestSells";
+import DealsOfDay from "@/components/product/DealsOfDay";
+import PopularProducts from "@/components/product/PopularProducts";
+import TopAndTrending from "@/components/product/TopAndTrending";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +11,10 @@ export default function Home() {
     <main>
       <Banner />
       <FeaturedCategory />
+      <PopularProducts />
+      <DailyBestSells />
+      <DealsOfDay />
+      <TopAndTrending />
     </main>
   );
 }

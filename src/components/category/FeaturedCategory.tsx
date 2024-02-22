@@ -8,7 +8,7 @@ const FeaturedCategory = () => {
   return (
     <section className="padding-container max-container py-6">
         <div className="hidden lg:flex gap-6 items-center justify-start text-green-30 font-[500]">
-        <h2  className="text-2xl font-[600]">Featured Categories</h2>
+        <h3 className="text-2xl font-[600]">Featured Categories</h3>
         <Link href="/">Cake & Milk</Link>
         <Link href="/">Coffes & Teas</Link>
         <Link href="/" className="text-green-10">Pet Foods</Link>
