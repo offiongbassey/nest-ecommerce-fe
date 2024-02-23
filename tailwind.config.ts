@@ -18,7 +18,8 @@ const config: Config = {
           60: "#ADADAD",
           70: "#B6B6B6",
           80: "#E9ECEF",
-          90: "#F2F3F4"
+          90: "#F2F3F4",
+          91: "#F4F6FA"
         },
         green: {
           10: "#3BB77E",
@@ -39,7 +40,8 @@ const config: Config = {
        
       },
       backgroundImage: {
-       "daily-best": "url('/daily-best-banner.png')"
+       "daily-best": "url('/daily-best-banner.png')",
+       "footer-banner": "url('/footer-banner.png')"
       },
     },
   },
