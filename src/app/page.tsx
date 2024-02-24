@@ -17,7 +17,7 @@ export default function Home() {
       <DailyBestSells />
       <DealsOfDay />
       <TopAndTrending />
-      <FooterBanner />
+      <FooterBanner image="/footer-banner-1.png" />
       <FooterFeatures />
     </main>
   );
