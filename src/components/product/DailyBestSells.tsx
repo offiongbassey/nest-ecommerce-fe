@@ -48,7 +48,7 @@ const DailyBestSells = () => {
             </div>
             
             {DAILY_BEST_SELL.slice(startFrom, endAt).map((product, index) => (
-                <ProductItem index={index} product={product} alternative={true} />
+                <ProductItem key={index} product={product} alternative={true} />
             ))}
         </div>
     </div>

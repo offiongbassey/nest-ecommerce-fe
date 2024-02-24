@@ -3,7 +3,6 @@ import StarIcon from '@/svg/StarIcon'
 import CartIcon from '@/svg/CartIcon';
 
 interface ProductItemProps {
-    index: number;
     alternative?: boolean;
     product: {
         title: string;
@@ -19,10 +18,10 @@ interface ProductItemProps {
     }
 }
 
-const ProductItem = ({index, product, alternative}: ProductItemProps) => {
+const ProductItem = ({ product, alternative}: ProductItemProps) => {
     const { title, category, rate, vendor, price, old_price, type, variant, image, sold} = product;
   return (
-            <div key={index} className='border border-gray-30 rounded-2xl text-gray-60 overflow-hidden'>
+            <div className='border border-gray-30 rounded-2xl text-gray-60 overflow-hidden'>
                 {type !== "" ? 
                 <span style={{ backgroundColor: `${variant}`}} className={`text-white text-sm px-6 py-2 rounded-br-2xl rounded-tl-2xl`}>{type}</span> : null
                 }

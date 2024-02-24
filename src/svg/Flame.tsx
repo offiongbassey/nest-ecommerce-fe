@@ -1,12 +1,12 @@
-type FlameProps = {
+interface FlameProps {
     className: string;
 }
 const Flame = ({className}: FlameProps) => {
   return (
     <svg width="21" height="22" viewBox="0 0 21 22" className={className} xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_6511_1181)">
-    <g clip-path="url(#clip1_6511_1181)">
-    <g clip-path="url(#clip2_6511_1181)">
+    <g clipPath="url(#clip0_6511_1181)">
+    <g clipPath="url(#clip1_6511_1181)">
+    <g clipPath="url(#clip2_6511_1181)">
     <mask id="mask0_6511_1181" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="21">
     <path d="M20.9219 0.767151H0.921875V20.7672H20.9219V0.767151Z" fill="white"/>
     </mask>

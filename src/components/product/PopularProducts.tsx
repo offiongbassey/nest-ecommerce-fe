@@ -21,7 +21,7 @@ const PopularProducts = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 py-6'>
         {POPULAR_PRODUCTS.map((product, index) => (
             <ProductItem 
-            index={index} 
+            key={index}
             product={product}
             alternative={false}
             />

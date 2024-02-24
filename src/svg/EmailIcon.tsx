@@ -5,9 +5,9 @@ interface EmailIconProps {
 const EmailIcon = ({ className}: EmailIconProps) => {
   return (
     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_6511_8874)">
-<g clip-path="url(#clip1_6511_8874)">
-<g clip-path="url(#clip2_6511_8874)">
+<g clipPath="url(#clip0_6511_8874)">
+<g clipPath="url(#clip1_6511_8874)">
+<g clipPath="url(#clip2_6511_8874)">
 <mask id="mask0_6511_8874" maskUnits="userSpaceOnUse" x="0" y="1" width="16" height="17">
 <path d="M16 1.0542H0V17.0542H16V1.0542Z" fill="white"/>
 </mask>

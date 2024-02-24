@@ -5,6 +5,7 @@ import EmailIcon from "@/svg/EmailIcon"
 import LocationIcon from "@/svg/LocationIcon"
 import Image from "next/image"
 import Link from "next/link"
+import FooterEnd from "./FooterEnd"
 
 const Footer = () => {
   return (
@@ -76,6 +77,9 @@ const Footer = () => {
                     />
            </div>
         </div>
+
+        <hr className="border-green-20"/>
+        <FooterEnd />
     </footer>
   )
 }

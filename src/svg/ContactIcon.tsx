@@ -5,7 +5,7 @@ interface ContactIcon {
 const ContactIcon = ({ className}: ContactIcon) => {
   return (
     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_6511_8866)">
+    <g clipPath="url(#clip0_6511_8866)">
     <mask id="mask0_6511_8866" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
     <path d="M15.3713 0.82959H0.3125V15.8884H15.3713V0.82959Z" fill="white"/>
     </mask>

@@ -5,8 +5,8 @@ interface ClockIconProps {
 const ClockIcon = ({ className}: ClockIconProps) => {
   return (
     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_6511_8884)">
-    <g clip-path="url(#clip1_6511_8884)">
+    <g clipPath="url(#clip0_6511_8884)">
+    <g clipPath="url(#clip1_6511_8884)">
     <mask id="mask0_6511_8884" maskUnits="userSpaceOnUse" x="0" y="1" width="16" height="16">
     <path d="M15.7424 1.23828H0.683594V16.2971H15.7424V1.23828Z" fill="white"/>
     </mask>
