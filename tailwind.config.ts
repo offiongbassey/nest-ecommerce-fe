@@ -41,7 +41,8 @@ const config: Config = {
       },
       backgroundImage: {
        "daily-best": "url('/daily-best-banner.png')",
-       "footer-banner": "url('/footer-banner.png')"
+       "footer-banner": "url('/footer-banner.png')",
+       "achievement": "url('/about-achievement.png')"
       },
     },
   },

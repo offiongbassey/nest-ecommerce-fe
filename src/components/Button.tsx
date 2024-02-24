@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 const Button = ({type, variant, children, short}: ButtonProps) => {
   return (
-    <button type={type} className={`${variant} ${!short ? "w-full " : "max-w-28"} text-center  flex items-center gap-2`}>
+    <button type={type} className={`${variant} ${!short ? "w-full " : ""} text-center  flex items-center gap-2`}>
        {children && children}
     </button>
   )

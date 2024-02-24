@@ -581,3 +581,42 @@ export const FOOTER_LINKS = [
     }
 
 ]
+
+export const ABOUT_WHAT_WE_OFFER = [
+    {
+        title: "Best Prices & Offers",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-1.png"
+    },
+    {
+        title: "Wide Assortment",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-2.png"
+    },
+    {
+        title: "Free Delivery",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-3.png"
+    },
+    {
+        title: "Easy Returns",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-4.png"
+    },
+    {
+        title: "100% Satisfaction",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-5.png"
+    },
+    {
+        title: "Great Daily Deal",
+        desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        url: "/",
+        image: "/footer-feature-6.png"
+    },
+]
