@@ -18,7 +18,7 @@ const FeaturedCategory = () => {
         {/* Featured Category Cards */}
         <div className="hidden lg:flex gap-4 items-center justify-between pt-6">
             {FEATURED_CATEGORY.map((item, index) => (
-            <div style={{ backgroundColor: `${item.variant}` }} key={index} className={`px-1 py-4 rounded-2xl items-center justify-center flex flex-col`}>
+            <div style={{ backgroundColor: `${item.variant}` }} key={index} className={`w-full py-4 rounded-2xl items-center justify-center flex flex-col`}>
                 <Image 
                 src={item.image}
                 alt={item.title}
@@ -34,7 +34,7 @@ const FeaturedCategory = () => {
         {/* Featured Category Banner */}
         <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-between py-6">
             {FEATURED_CATEGORY_BANNER.map((banner, index) => (
-            <div style={{ backgroundImage: `url(${banner.image})`}} className="px-4 lg:px-10 py-16 rounded-2xl bg-center bg-no-repeat bg-cover w-full">
+            <div key={index} style={{ backgroundImage: `url(${banner.image})`}} className="px-4 lg:px-10 py-16 rounded-2xl bg-center bg-no-repeat bg-cover w-full">
                 <p className="text-green-30 font-[600] text-2xl lg:max-w-[250px] py-4">{banner.title}</p>
                 {banner.title.length < 38  ? <br/> : null }
                 <Button variant="btn_green" short={true} type="button">Shop Now</Button>

@@ -41,10 +41,10 @@ const Banner = () => {
       <div 
       style={{ backgroundImage: `url(${slides[currentSlide].url})`}}
       className='bg-green-20 px-12 md:px-14 lg:px-24 pt-10 md:pt-24 rounded-xl bg-cover bg-center'>
-        <h1 className='text-green-30 font-[800] text-2xl md:text-4xl lg:max-w-[350px] mb-4'>{slides[currentSlide].title}</h1>
+        <h1 className='text-green-30 font-[800] text-2xl md:text-5xl lg:max-w-[460px] mb-4'>{slides[currentSlide].title}</h1>
         <button onClick={prevSlide} className='bg-white p-3 rounded-full rotate-90 absolute mt-10 md:mt-0 left-6 md:left-8 lg:left-28' ><ArrowIcon className='fill-gray-10'/></button>
         <button onClick={nextSlide} className='bg-white p-3 rounded-full rotate-[270deg] absolute mt-10 md:mt-0 right-6 md:right-8 lg:right-28' ><ArrowIcon className='fill-gray-10'/></button>
-        <p className='text-gray-10 text-sm md:text-md mb-10'>{slides[currentSlide].desc}</p>
+        <p className='text-gray-10 text-sm md:text-lg mb-10'>{slides[currentSlide].desc}</p>
         <Subscription />
         <div className='flex items-center justify-center gap-2 pt-10 pb-6'>
            {slides.map((slide, index) => (

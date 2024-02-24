@@ -1,7 +1,7 @@
 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_6511_1147)">
-<g clip-path="url(#clip1_6511_1147)">
-<g clip-path="url(#clip2_6511_1147)">
+<g clipPath="url(#clip0_6511_1147)">
+<g clipPath="url(#clip1_6511_1147)">
+<g clipPath="url(#clip2_6511_1147)">
 <mask id="mask0_6511_1147" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="0" width="25" height="25">
 <path d="M25.0156 0.496521H1.01562V24.4965H25.0156V0.496521Z" fill="white"/>
 </mask>

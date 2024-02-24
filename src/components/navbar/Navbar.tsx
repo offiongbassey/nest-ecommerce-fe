@@ -8,6 +8,8 @@ import Browse from "@/svg/Browse";
 import Flame from "@/svg/Flame";
 import MobileNavbar from "./MobileNavbar";
 import { Dispatch, SetStateAction, useState } from "react";
+import SupportCenter from "../SupportCenter";
+import HeadphoneIcon from "@/svg/HeadphoneIcon";
 
 interface NavbarProps {
   toggle: boolean;
@@ -47,18 +49,9 @@ const Navbar = ({toggle, setToggle}: NavbarProps) => {
                 <li className="flex items-center gap-1 hover_green">Contact </li>
                 </Link>
             </ul>
-            <div className="hidden lg:flex gap-2">
-                <Image 
-                src="/icon-headphone.svg"
-                alt="headphone"
-                width={40}
-                height={10}
-                />
-               <div>
-                    <h4 className="text-green-10 font-[600] text-xl">1900 - 888</h4>
-                    <p className="text-[10px] font-[500] text-gray-10">24/7 Support Center</p>
-               </div>
-            </div>
+           <SupportCenter phone_no="1900 - 888" message="24/7 Support Center">
+            <HeadphoneIcon className="fill-green-30" />
+           </SupportCenter>
 
             {/* Mobile Section */}
             {toggle &&  <MobileNavbar  setToggle={setToggle}/>}

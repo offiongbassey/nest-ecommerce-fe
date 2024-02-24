@@ -5,7 +5,7 @@ const TopAndTrending = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-green-30 padding-container max-container'>
      {TOP_AND_TRENDING_PRODUCTS.map((product, index) => (
-        <TopProductItem index={index} product={product} />
+        <TopProductItem key={index} product={product} />
       ))}
     </div>
   )

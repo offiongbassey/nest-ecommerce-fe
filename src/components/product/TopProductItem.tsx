@@ -1,7 +1,6 @@
 import StarIcon from '@/svg/StarIcon'
 
 interface TopProductItemProps {
-    index: number;
     product: {
         title: string;
         items: {
@@ -14,10 +13,10 @@ interface TopProductItemProps {
     }
 }
 
-const TopProductItem = ({index, product}: TopProductItemProps) => {
+const TopProductItem = ({ product}: TopProductItemProps) => {
 const { title, items} = product;
   return (
-    <div key={index}>
+    <div>
     <h4 className='text-xl font-[600] mb-2'>{title}</h4>
     <div className='bg-green-20 w-20 py-[2px]'/>
     <div className='py-6 flex flex-col gap-4 border-t border-gray-30'>

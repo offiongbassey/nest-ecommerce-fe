@@ -411,3 +411,173 @@ export const TOP_AND_TRENDING_PRODUCTS = [
         ]
     }
 ]
+
+export const FOOTER_FEATURES = [
+    {
+        title: "Best prices & offers",
+        desc: "Orders $50 or more",
+        image: "/footer-feature-1.png",
+        image_tag: "prices"
+    },
+    {
+        title: "Free delivery",
+        desc: "24/7 amazing services",
+        image: "/footer-feature-2.png",
+        image_tag: "free-delivery"
+    },
+    {
+        title: "Great daily deal",
+        desc: "When you sign up",
+        image: "/footer-feature-3.png",
+        image_tag: "daily-deal"
+    },
+    {
+        title: "Wide assortment",
+        desc: "Mega Discounts",
+        image: "/footer-feature-4.png",
+        image_tag: "assortment"
+    },
+    {
+        title: "Easy returns",
+        desc: "Within 30 days",
+        image: "/footer-feature-5.png",
+        image_tag: "returns"
+    }
+
+]
+
+export const FOOTER_LINKS = [
+    {
+        title: "Company",
+        items: [
+            {
+                name: "About Us",
+                url: ""
+            },
+            {
+                name: "Delivery Information",
+                url: ""
+            },
+            {
+                name: "Privacy Policy",
+                url: ""
+            },
+            {
+                name: "Terms & Conditions",
+                url: ""
+            },
+            {
+                name: "Contact Us",
+                url: ""
+            },
+            {
+                name: "Support Center",
+                url: ""
+            },
+            {
+                name: "Careers",
+                url: ""
+            }
+        ]
+    },
+    {
+        title: "Account",
+        items: [
+            {
+                name: "Sign In",
+                url: ""
+            },
+            {
+                name: "View Cart",
+                url: ""
+            },
+            {
+                name: "My Wishlist",
+                url: ""
+            },
+            {
+                name: "Track My Order",
+                url: ""
+            },
+            {
+                name: "Help Ticket",
+                url: ""
+            },
+            {
+                name: "Shipping Details",
+                url: ""
+            },
+            {
+                name: "Compare products",
+                url: ""
+            }
+        ]
+    },
+    {
+        title: "Corporate",
+        items: [
+            {
+                name: "Become a Vendor",
+                url: ""
+            },
+            {
+                name: "Affiliate Program",
+                url: ""
+            },
+            {
+                name: "Farm Business",
+                url: ""
+            },
+            {
+                name: "Farm Careers",
+                url: ""
+            },
+            {
+                name: "Our Suppliers",
+                url: ""
+            },
+            {
+                name: "Accessibility",
+                url: ""
+            },
+            {
+                name: "Promotions",
+                url: ""
+            }
+        ]
+    },
+    {
+        title: "Popular",
+        items: [
+            {
+                name: "Milk & Flavoured Milk",
+                url: ""
+            },
+            {
+                name: "Butter and Margarine",
+                url: ""
+            },
+            {
+                name: "Eggs Substitutes",
+                url: ""
+            },
+            {
+                name: "Marmalades",
+                url: ""
+            },
+            {
+                name: "Sour Cream and Dips",
+                url: ""
+            },
+            {
+                name: "Tea & Kombucha",
+                url: ""
+            },
+            {
+                name: "Cheese",
+                url: ""
+            }
+        ]
+    }
+
+]

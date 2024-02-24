@@ -3,7 +3,6 @@ import StarIcon from "@/svg/StarIcon";
 import Button from "../Button";
 
 interface ProductItemWrapProps {
-  index: number;
   product: {
     title: string;
     rate: number;
@@ -13,10 +12,10 @@ interface ProductItemWrapProps {
     image: string;
   }
 }
-const ProductItemWrap = ({index, product}: ProductItemWrapProps) => {
+const ProductItemWrap = ({ product}: ProductItemWrapProps) => {
   const {title, rate, vendor, price, old_price, image } = product;
   return (
-    <div className="">
+    <div>
         <div style={{ backgroundImage: `url(${image})`}} className="px-20 py-32 bg-cover bg-center bg-no-repeat rounded-2xl">
         </div>
         <div className="p-3 lg:p-6 rounded-2xl m-4 -mt-20 bg-white shadow-xl text-gray-50">

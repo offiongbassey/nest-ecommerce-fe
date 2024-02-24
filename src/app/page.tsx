@@ -1,5 +1,7 @@
 import Banner from "@/components/banner/Banner";
 import FeaturedCategory from "@/components/category/FeaturedCategory";
+import FooterBanner from "@/components/footer/FooterBanner";
+import FooterFeatures from "@/components/footer/FooterFeatures";
 import DailyBestSells from "@/components/product/DailyBestSells";
 import DealsOfDay from "@/components/product/DealsOfDay";
 import PopularProducts from "@/components/product/PopularProducts";
@@ -15,6 +17,8 @@ export default function Home() {
       <DailyBestSells />
       <DealsOfDay />
       <TopAndTrending />
+      <FooterBanner />
+      <FooterFeatures />
     </main>
   );
 }
