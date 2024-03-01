@@ -7,6 +7,7 @@ import Arrow from "./Arrow";
 import { IoIosMenu } from "react-icons/io";
 import Navbar from "./navbar/Navbar";
 import { useState } from "react";
+import ProfileIcon from "@/svg/ProfileIcon";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -84,12 +85,7 @@ const Header = () => {
                     <p>Cart</p>
                 </Link>
                 <Link href="/profile" className="hidden lg:flex justify-start items-end  gap-1">
-                <Image
-                    src="/profile.svg"
-                    alt="profile"
-                    width={26}
-                    height={26}
-                   />
+                <ProfileIcon className="fill-gray-94"/>
                     <p>Account</p>
                 </Link>
             </div>
