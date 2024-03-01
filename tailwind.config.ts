@@ -19,7 +19,9 @@ const config: Config = {
           70: "#B6B6B6",
           80: "#E9ECEF",
           90: "#F2F3F4",
-          91: "#F4F6FA"
+          91: "#F4F6FA",
+          92: "#333333",
+          93: "#F1F1F1"
         },
         green: {
           10: "#3BB77E",
@@ -30,12 +32,16 @@ const config: Config = {
         },
         pink: {
           10: "#F74B81", 
+          20: "#FDE0E9"
         },
         blue: {
           10: "#67BCEE"
         },
         orange: {
           10: "#F59758"
+        },
+        yellow: {
+          10: "#FEC601"
         }
        
       },

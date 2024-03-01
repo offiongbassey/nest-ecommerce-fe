@@ -2,7 +2,7 @@ import Subscription from '../Subscription'
 import Image from 'next/image';
 
 interface FooterBannerProps {
-  image: string;
+  image: "/footer-banner-2.png" | "/footer-banner-1.png";
 }
 
 const FooterBanner = ({ image }: FooterBannerProps) => {

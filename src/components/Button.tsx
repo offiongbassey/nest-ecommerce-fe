@@ -1,6 +1,6 @@
 interface ButtonProps {
     type: "submit" | "button";
-    variant: "btn_green" | "btn_green_round" | "btn_light_green" ;
+    variant: "btn_green" | "btn_green_round" | "btn_light_green" | "btn_white" | "btn_white_outline" | "btn_white_round_2";
     children: React.ReactNode;
     short?: boolean
 }

@@ -1,6 +1,7 @@
 import Button from '../Button'
 import StarIcon from '@/svg/StarIcon'
 import CartIcon from '@/svg/CartIcon';
+import ProductCard from './ProductCard';
 
 interface ProductItemProps {
     alternative?: boolean;
@@ -21,13 +22,7 @@ interface ProductItemProps {
 const ProductItem = ({ product, alternative}: ProductItemProps) => {
     const { title, category, rate, vendor, price, old_price, type, variant, image, sold} = product;
   return (
-            <div className='border border-gray-30 rounded-2xl text-gray-60 overflow-hidden'>
-                {type !== "" ? 
-                <span style={{ backgroundColor: `${variant}`}} className={`text-white text-sm px-6 py-2 rounded-br-2xl rounded-tl-2xl`}>{type}</span> : null
-                }
-                <br/>
-                <div style={{ backgroundImage: `url(${image})`}} className='bg-cover bg-center bg-no-repeat py-16 md:py-32 flex'> 
-                </div>
+           <ProductCard variant={variant} image={image} type={type}>
                 <div className='p-4'>
                     <span className='text-xs'>{category}</span>
                     <h2 className='font-[600] text-green-30 text-sm mt-3'>{title}</h2>
@@ -48,7 +43,8 @@ const ProductItem = ({ product, alternative}: ProductItemProps) => {
                     </>
                     }
                 </div>
-            </div>
+            </ProductCard>
+          
   )
 }
 
