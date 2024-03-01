@@ -27,7 +27,7 @@ const Navbar = ({toggle, setToggle}: NavbarProps) => {
                 <Link href="/">
                 <li className="flex items-center gap-1 text-sm font-[600] text-green-10 "> Home <ArrowIcon className="fill-green-10" /> </li>
                 </Link>
-                <Link href="/">
+                <Link href="/about">
                 <li className="flex gap-1 hover_green">About </li>
                 </Link>
                 <Link href="/">

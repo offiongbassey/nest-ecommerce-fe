@@ -190,6 +190,47 @@ export const POPULAR_PRODUCTS = [
     },
 ]
 
+
+export const RELATED_PRODUCTS = [
+    {
+        title: "Ulstra Bass Headphone",
+        rate: 5,
+        price: 238.85,
+        old_price: 245.8,
+        type: "Hot",
+        variant: "#F74B81",
+        image: "/product-1.png"
+    },
+    {
+        title: "Smart Bluetooth Speaker",
+        category: "Hodo Foods",
+        rate: 5,
+        price: 138.85,
+        old_price: 145.8,
+        type: "-12%",
+        variant: "#67BCEE",
+        image: "/product-2.png"
+    },
+    {
+        title: "HomeSpeak 12UEA Goole",
+        rate: 5,
+        price: 738.85,
+        old_price: 1245.8,
+        type: "New",
+        variant: "#3BB77E",
+        image: "/product-3.png"
+    },
+    {
+        title: "Dadua Camera 4K 2022EF",
+        rate: 4,
+        price: 89.8,
+        old_price: 98.8,
+        type: "",
+        variant: "",
+        image: "/product-4.png"
+    }
+]
+
 export const DAILY_BEST_SELL = [
     {
         title: "All Natural Italian-Style Chicken Meatballs",
@@ -412,6 +453,7 @@ export const TOP_AND_TRENDING_PRODUCTS = [
     }
 ]
 
+
 export const FOOTER_FEATURES = [
     {
         title: "Best prices & offers",
@@ -452,31 +494,31 @@ export const FOOTER_LINKS = [
         items: [
             {
                 name: "About Us",
-                url: ""
+                url: "/about"
             },
             {
                 name: "Delivery Information",
-                url: ""
+                url: "/"
             },
             {
                 name: "Privacy Policy",
-                url: ""
+                url: "/"
             },
             {
                 name: "Terms & Conditions",
-                url: ""
+                url: "/"
             },
             {
                 name: "Contact Us",
-                url: ""
+                url: "/"
             },
             {
                 name: "Support Center",
-                url: ""
+                url: "/"
             },
             {
                 name: "Careers",
-                url: ""
+                url: "/"
             }
         ]
     },

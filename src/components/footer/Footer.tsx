@@ -12,12 +12,14 @@ const Footer = () => {
     <footer className="padding-container max-container">
         <div className="md:grid md:grid-cols-3 lg:flex lg:justify-between gap-2 text-sm font-[500] py-6 text-green-30">
            <div className="lg:max-w-[300px]">
-                <Image
+               <Link href="/">
+               <Image
                     src="/logo.svg"
                     alt="logo"
                     width={171}
                     height={46}
                 />
+                </Link>
                 <p className="my-4">Awesome grocery store website template</p>
                 <div className="flex gap-2 items-start mb-3">
                     <LocationIcon className="fill-green-10" />
