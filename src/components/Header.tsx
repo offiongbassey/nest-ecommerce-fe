@@ -7,6 +7,7 @@ import Arrow from "./Arrow";
 import { IoIosMenu } from "react-icons/io";
 import Navbar from "./navbar/Navbar";
 import { useState } from "react";
+import ProfileIcon from "@/svg/ProfileIcon";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -53,7 +54,7 @@ const Header = () => {
                    <p> Your Location</p>
                   <Arrow/>
                 </div>
-                <Link href="/compare" className="hidden lg:flex justify-start items-end gap-1">
+                <Link href="/customer/compare" className="hidden lg:flex justify-start items-end gap-1">
                 <span className="cirlce-count">3</span>
                 <Image
                     src="/compare.svg"
@@ -63,7 +64,7 @@ const Header = () => {
                    />
                     <p>Compare</p>
                 </Link>
-                <Link href="/wishlist" className="flex justify-start items-end  gap-1">
+                <Link href="/customer/wishlist" className="flex justify-start items-end  gap-1">
                 <span className="cirlce-count">3</span>
                 <Image
                     src="/wishlist.svg"
@@ -73,7 +74,7 @@ const Header = () => {
                    />
                     <p>Wishlist</p>
                 </Link>
-                <Link href="/cart"  className="flex justify-start items-end gap-1">
+                <Link href="/customer/cart"  className="flex justify-start items-end gap-1">
                 <span className="cirlce-count">3</span>
                 <Image
                     src="/cart.svg"
@@ -83,13 +84,8 @@ const Header = () => {
                    />
                     <p>Cart</p>
                 </Link>
-                <Link href="/profile" className="hidden lg:flex justify-start items-end  gap-1">
-                <Image
-                    src="/profile.svg"
-                    alt="profile"
-                    width={26}
-                    height={26}
-                   />
+                <Link href="/customer/profile" className="hidden lg:flex justify-start items-end  gap-1">
+                <ProfileIcon className="fill-gray-94"/>
                     <p>Account</p>
                 </Link>
             </div>
