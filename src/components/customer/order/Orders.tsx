@@ -11,7 +11,7 @@ const Orders = () => {
         <div className='lg:px-24 flex flex-col md:flex-row gap-6 md:gap-14'>
             <Sidebar />
             <div className='w-full'>
-                <h2 className='text-green-30 text-2xl font-[600] mb-4'>Your Orders</h2>
+                <h2 className='text-green-30 text-3xl font-[600] mb-4'>Your Orders</h2>
                 <div className='relative overflow-x-auto'>
                     <table className='w-full text-sm text-left border border-gray-20'>
                         <thead className='border-b border-gray-20'>
