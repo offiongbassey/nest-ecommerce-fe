@@ -1,11 +1,14 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
 import Link from 'next/link'
+import FooterBanner from '@/components/footer/FooterBanner'
+import FooterFeatures from '@/components/footer/FooterFeatures'
 
 const Orders = () => {
   return (
+    <>
     <section className='padding-container max-container py-16'>
-        <div className='lg:px-24 flex gap-14'>
+        <div className='lg:px-24 flex flex-col md:flex-row gap-6 md:gap-14'>
             <Sidebar />
             <div className='w-full'>
                 <h2 className='text-green-30 text-2xl font-[600] mb-4'>Your Orders</h2>
@@ -54,7 +57,11 @@ const Orders = () => {
                 </div>
             </div>
         </div>
+        
     </section>
+    <FooterBanner image='/footer-banner-2.png' />
+    <FooterFeatures />
+   </>
   )
 }
 
