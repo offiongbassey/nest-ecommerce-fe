@@ -5,11 +5,23 @@ import Link from "next/link";
 import ProductItem from "./ProductItem";
 import Button from "../Button";
 import LongArrowIcon from "@/svg/LongArrowIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { getBestProducts } from "@/redux/features/productSlice";
+import { ProductAttributes } from "@/utils/TypesUtils";
 
 const DailyBestSells = () => {
     const [startFrom, setStartFrom] = useState(0);
     const [endAt, setEndAt] = useState(4);
+    const dispatch = useDispatch<AppDispatch>();
+    const { best_products } = useAppSelector((state) => state.product);
+
+    useEffect(() => {
+        if(typeof(window) !== undefined){
+            dispatch(getBestProducts());
+        }
+    }, [])
     
     const prevProduct = () => {
         const is_previous_start = startFrom === 0;
@@ -47,8 +59,13 @@ const DailyBestSells = () => {
                 <Button type="button" variant="btn_green" short={true}>Shop Now</Button>
             </div>
             
-            {DAILY_BEST_SELL.slice(startFrom, endAt).map((product, index) => (
-                <ProductItem key={index} product={product} alternative={true} />
+            {best_products.slice(startFrom, endAt).map((product: ProductAttributes) => (
+                <ProductItem 
+                    key={product.id} 
+                    product={product} 
+                    alternative={true}
+                    type="Save 15%"
+                    variant="#F74B81"/>
             ))}
         </div>
     </div>

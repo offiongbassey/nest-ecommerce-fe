@@ -1,9 +1,11 @@
 import Product from "@/components/product/product-detail/Product"
 
-const page = () => {
+const page = ({ params }: {
+  params: { slug: string}
+}) => {
   return (
     <>
-      <Product/>
+      <Product slug={params.slug}/>
     </>
   )
 }

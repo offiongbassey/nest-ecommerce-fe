@@ -1,13 +1,13 @@
-const ProductImage = () => {
+const ProductImage = ({ product_images }: { product_images: [{ id: number, image_url: string}]}) => {
+
   return (
     <div className="">
-        <div style={{ backgroundImage: 'url("/product-img1.png")'}} className="bg-cover bg-center p-36 border-2 border-green-10 mb-6">
+        <div style={{ backgroundImage: `url(${product_images?.length > 0 && product_images[0]?.image_url})`}} className="bg-cover bg-center p-36 border-2 border-green-10 mb-6">
         </div>
         <div className="flex gap-2">
-            <div style={{backgroundImage: 'url("/product-img2.png")'}} className="bg-cover bg-center p-6 md:p-10 border border-green-10 rounded-2xl" />
-            <div style={{backgroundImage: 'url("/product-img3.png")'}} className="bg-cover bg-center p-6 md:p-10" />
-            <div style={{backgroundImage: 'url("/product-img4.png")'}} className="bg-cover bg-center p-6 md:p-10" />
-            <div style={{backgroundImage: 'url("/product-img5.png")'}} className="bg-cover bg-center p-6 md:p-10" />
+          {product_images?.map((img) => (
+            <div key={img.id} style={{backgroundImage: `url(${img.image_url})`}} className="bg-cover bg-center p-6 md:p-10 border border-green-10 rounded-2xl" />
+          ))}
         </div>
     </div>
   )
