@@ -13,6 +13,9 @@ type ProductAttributes = {
     store: { id: number, name: string, slug: string };
     regular_price: number;
     promo_price: number;
+    product_colors: []; 
+    product_sizes: []; 
+    newQuantity: number
   }
 type ProductDetails = {
     category_id: number;
@@ -150,7 +153,7 @@ export const getProductBySlug = createAsyncThunk("product/slug", async(slug: str
 export const getRelatedProducts = createAsyncThunk("product/related", async(slug: string, thunkApi) => {
     try {
         const response = await axios.get(`${PRODUCT_ENDPOINT}/related/${slug}?limit=4`);
-        console.log("Related ", response.data)
+
         return response.data;
     } catch (error: any) {
         const error_message = error.response.data.message;

@@ -17,7 +17,8 @@ const PopularProducts = () => {
     if(typeof(window) !== undefined){
     dispatch(getProducts());
     }
-  }, [])
+  }, []);
+
   return (
     <section className='padding-container max-container'>
         <div className='text-green-30 text-xs lg:text-sm font-[600] flex flex-col lg:flex-row lg:gap-4 lg:items-center justify-between'>

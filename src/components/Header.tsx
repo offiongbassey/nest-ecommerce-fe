@@ -8,9 +8,11 @@ import { IoIosMenu } from "react-icons/io";
 import Navbar from "./navbar/Navbar";
 import { useState } from "react";
 import ProfileIcon from "@/svg/ProfileIcon";
+import { useAppSelector } from "@/redux/store";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
+    const { totalCartItem } = useAppSelector((state) => state.cart);
   return (
     <>
     <header className="padding-container max-container text-gray-10 text-sm font-[500]">
@@ -75,7 +77,7 @@ const Header = () => {
                     <p>Wishlist</p>
                 </Link>
                 <Link href="/customer/cart"  className="flex justify-start items-end gap-1">
-                <span className="cirlce-count">3</span>
+                {totalCartItem > 0 && <span className="cirlce-count">{totalCartItem}</span>}
                 <Image
                     src="/cart.svg"
                     alt="cart"

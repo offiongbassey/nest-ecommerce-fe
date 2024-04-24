@@ -10,4 +10,7 @@ export type ProductAttributes = {
     regular_price: number;
     promo_price: number;
     currency: string;
+    product_colors: []; 
+    product_sizes: []; 
+    newQuantity: number
   }

@@ -25,7 +25,7 @@ const RelatedProducts = ({related_products}: {related_products: [RelatedProducts
             {related_products.map((product) => {
                 const { id, name, currency, promo_price, regular_price, product_images, slug } = product;
                 return (
-                    <Link href={`/product/${slug}`}>
+                    <Link key={id} href={`/product/${slug}`}>
                         <ProductCard variant='#F74B81' product_images={product_images} type="Hot">
                             <div className='p-4'>
                                 <h2 className='font-[600] text-green-30 text-sm mt-3'>{name}</h2>
