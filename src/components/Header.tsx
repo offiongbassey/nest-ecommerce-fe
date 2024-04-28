@@ -6,13 +6,24 @@ import SearchItem from "./category/SearchItem";
 import Arrow from "./Arrow";
 import { IoIosMenu } from "react-icons/io";
 import Navbar from "./navbar/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProfileIcon from "@/svg/ProfileIcon";
-import { useAppSelector } from "@/redux/store";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { useDispatch } from "react-redux";
+import { getCart } from "@/redux/features/cartSlice";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    const { totalCartItem } = useAppSelector((state) => state.cart);
+    const { totalCartItem, cart } = useAppSelector((state) => state.cart);
+    const { token } = useAppSelector((state) => state.user.user);
+    const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(() => {
+        if(token.length > 0){
+            dispatch(getCart(token));
+        }
+    }, [token, dispatch]);
+
   return (
     <>
     <header className="padding-container max-container text-gray-10 text-sm font-[500]">
@@ -86,7 +97,7 @@ const Header = () => {
                    />
                     <p>Cart</p>
                 </Link>
-                <Link href="/customer/profile" className="hidden lg:flex justify-start items-end  gap-1">
+                <Link href="/customer/dashboard" className="hidden lg:flex justify-start items-end  gap-1">
                 <ProfileIcon className="fill-gray-94"/>
                     <p>Account</p>
                 </Link>

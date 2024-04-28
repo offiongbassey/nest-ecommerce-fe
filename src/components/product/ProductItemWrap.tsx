@@ -4,8 +4,8 @@ import Button from "../Button";
 import WrapCard from "../card/WrapCard";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
-import { addToCart } from "@/redux/features/cartSlice";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { addToCart, addToRemoteCart } from "@/redux/features/cartSlice";
 
 interface ProductItemWrapProps {
   product: {
@@ -26,9 +26,14 @@ interface ProductItemWrapProps {
 const ProductItemWrap = ({ product}: ProductItemWrapProps) => {
   const {id, name, store, product_colors, regular_price, quantity, quantity_sold, product_sizes, promo_price, product_images, currency, slug } = product;
   const dispatch = useDispatch<AppDispatch>();
+  const { token } = useAppSelector((state) => state.user.user);
   
   const defaultAddToCart = () => {
-    dispatch(addToCart({ item: { id, name, currency, promo_price, regular_price, slug, product_colors, product_images, quantity, quantity_sold, product_sizes }, quantity: 1 }))
+    if(token.length > 0){
+        dispatch(addToRemoteCart({ product_id: id, quantity: 1, token }));
+    }else{
+       dispatch(addToCart({ item: { id, name, currency, promo_price, regular_price, slug, product_colors, product_images, quantity, quantity_sold, product_sizes }, quantity: 1 }))
+    }
   }
 
   return (

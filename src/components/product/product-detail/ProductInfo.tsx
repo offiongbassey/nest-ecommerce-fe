@@ -1,5 +1,5 @@
 import Button from '@/components/Button'
-import { addToCart, clearCart } from '@/redux/features/cartSlice'
+import { addToCart, addToRemoteCart, clearCart } from '@/redux/features/cartSlice'
 import { AppDispatch, useAppSelector } from '@/redux/store'
 import CartIcon from '@/svg/CartIcon'
 import ShareIcon from '@/svg/ShareIcon'
@@ -28,16 +28,20 @@ interface Product {
 const ProductInfo: React.FC<{product: Product}> = ({ product }) => {
     const { id, name, currency, quantity, product_colors, promo_price, product_images, regular_price, description, quantity_sold, product_sizes, slug} = product;
     const discount = 100 * (regular_price - promo_price) / regular_price;
-    const { cart, totalCartItem, totalCartValue } = useAppSelector((state) => state.cart);
     const [newQuantity, setNewQuantity ] = useState(0);
-    console.log("Cart ", cart, totalCartItem, totalCartValue);
+    const { token } = useAppSelector((state) => state.user.user);
     
     const dispatch = useDispatch<AppDispatch>();
     const addItemToCart = () => {
         if(newQuantity < 1){
             return toast.error("Quantity is required");
         }
+        if(token.length > 0){
+            //add to remote cart
+            dispatch(addToRemoteCart({ product_id: id, quantity: newQuantity, token }))
+        }else{
        dispatch(addToCart({ item: { id, name, currency, promo_price, regular_price, slug, product_colors, product_images, quantity, quantity_sold, product_sizes }, quantity: newQuantity }));
+        }
     }
 
     const handleQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -9,7 +9,7 @@ import CartShipping from "./CartShipping";
 import CartSubtotal from "./CartSubtotal";
 import FooterBanner from "@/components/footer/FooterBanner";
 import Link from "next/link";
-import { clearCart } from "@/redux/features/cartSlice";
+import { clearCart, clearRemoteCart } from "@/redux/features/cartSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import ClearCart from "@/components/modal/cart/ClearCart";
@@ -18,11 +18,17 @@ const Cart = () => {
   const { cart, totalCartValue, totalCartItem } = useAppSelector(
     (state) => state.cart
   );
+  const { token } = useAppSelector((state) => state.user.user);
+
   const dispatch = useDispatch<AppDispatch>();
   const [openModal, setOpenModal] = useState(false);
 
   const clearCartItems = () => {
+    if(token.length > 0){
+      dispatch(clearRemoteCart(token));
+    }else{
     dispatch(clearCart());
+    }
     setOpenModal(false);
   };
   return (

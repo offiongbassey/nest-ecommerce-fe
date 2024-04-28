@@ -4,8 +4,8 @@ import CartIcon from '@/svg/CartIcon';
 import ProductCard from './ProductCard';
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '@/redux/store';
-import { addToCart } from '@/redux/features/cartSlice';
+import { AppDispatch, useAppSelector } from '@/redux/store';
+import { addToCart, addToRemoteCart } from '@/redux/features/cartSlice';
 
 interface ProductItemProps {
     alternative?: boolean;
@@ -31,11 +31,16 @@ interface ProductItemProps {
 
 const ProductItem = ({ product, alternative, type, variant}: ProductItemProps) => {
     const {id, name, store, sub_category, product_colors, regular_price, quantity, product_sizes, newQuantity,  quantity_sold, promo_price, product_images, currency, slug} = product;
+    const { token } = useAppSelector((state) => state.user.user);
 
     const dispatch = useDispatch<AppDispatch>();
 
     const defaultAddToCart = () => {
+        if(token.length > 0){
+            dispatch(addToRemoteCart({ product_id: id, quantity: 1, token }));
+        }else{
         dispatch(addToCart({ item: { id, name, currency, promo_price, regular_price, slug, product_colors, product_images, quantity, quantity_sold, product_sizes }, quantity: 1 }))
+        }
     }
   return (
            

@@ -1,3 +1,8 @@
+"use client";
+
+import { clearCart } from "@/redux/features/cartSlice";
+import { logoutUser } from "@/redux/features/userSlice"
+import { AppDispatch, useAppSelector } from "@/redux/store"
 import CartIcon from "@/svg/CartIcon"
 import DashboardIcon from "@/svg/DashboardIcon"
 import LocationIcon from "@/svg/LocationIcon"
@@ -6,8 +11,20 @@ import OrderIcon from "@/svg/OrderIcon"
 import ProfileIcon from "@/svg/ProfileIcon"
 import WishIcon from "@/svg/WishIcon"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useDispatch } from "react-redux"
 
 const Sidebar = () => {
+    const dispatch = useDispatch<AppDispatch>();
+    const { token } = useAppSelector((state) => state.user.user);
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        await dispatch(logoutUser(token));
+        dispatch(clearCart());
+        router.push("/");
+    }
+
   return (
    <div className="font-[600] text-gray-10 flex flex-col gap-2 min-w-[250px]">
         <Link href="/customer/dashboard">
@@ -46,12 +63,10 @@ const Sidebar = () => {
                 Account Details
             </div>
         </Link> 
-        <Link href="/customer/wishlist">
-            <div className="border border-gray-30 rounded-xl p-3 w-full flex gap-2 items-center">
+        <div onClick={handleLogout} className="border cursor-pointer border-gray-30 rounded-xl p-3 w-full flex gap-2 items-center">
                 <LogoutIcon className="fill-gray-10"/>
                 Logout
-            </div>
-        </Link> 
+        </div>
         
    </div>
   )

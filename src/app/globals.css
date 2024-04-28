@@ -34,6 +34,9 @@ img {
   .primary-input{
     @apply w-72 h-10 p-3 focus:outline-none 
   }
+  .form-input {
+    @apply focus:outline-none px-4 py-2 bg-gray-90 rounded-md mt-4
+  }
   .secondary-input{
     @apply focus:outline-none rounded-md border border-gray-20 
   }
